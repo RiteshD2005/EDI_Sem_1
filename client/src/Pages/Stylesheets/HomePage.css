@@ -1,0 +1,118 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #333;
+}
+
+/* Banner */
+.Banner {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    position: fixed;
+    width: 100%;
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 1rem;
+}
+
+.Banner p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Control Panel */
+.Control-panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60vh;
+    background: #ffffff;
+    border-radius: 24px 24px 0 0;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 1.5rem;
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Card */
+.Hcard {
+    background: #d4d4d4;
+    height: 11rem;
+    width: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #01466b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+    cursor: pointer;
+}
+
+.Hcard:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 119, 182, 0.25);
+    background: #e0f7ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .Banner {
+        font-size: 2rem;
+    }
+
+    .Control-panel {
+        height: 60vh;
+        padding: 1.5rem 1rem;
+    }
+
+    .Hcard {
+        width: 9rem;
+        height: 9rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Banner {
+        font-size: 1.5rem;
+    }
+
+    .Banner p {
+        font-size: 0.9rem;
+    }
+
+    .Control-panel {
+        height: 60vh;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .Hcard {
+        width: 7.5rem;
+        height: 7.5rem;
+        font-size: 0.9rem;
+    }
+}

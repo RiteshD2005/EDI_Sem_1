@@ -1,0 +1,369 @@
+/* ==============================
+   Global Styles
+   ============================== */
+body {
+  /* background: linear-gradient(135deg, #a5f3fc, #93c5fd); */
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==============================
+   Hero Section
+   ============================== */
+.hero-section {
+  background: linear-gradient(135deg, #a5f3fc, #93c5fd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ==============================
+   Content Section
+   ============================== */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  min-height: 65vh;
+  background-color: #ffffff;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ==============================
+   Button Bar
+   ============================== */
+.button-bar {
+  position: relative;
+  background-color: #ffffff;
+  width: 85%;
+  color: #333;
+  padding: 16px;
+  margin: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button-bar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+}
+
+.reqId {
+  position: relative;
+  left: 2%;
+  font-weight: 500;
+  color: #444;
+}
+
+/* ==============================
+   Status Box
+   ============================== */
+.status-box {
+  position: absolute;
+  right: 2%;
+  width: 90px;
+  padding: 6px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #e0e0e0;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Variants */
+.status-box.green {
+  background-color: #4ade80;
+  color: #064e3b;
+}
+
+.status-box.red {
+  background-color: #f87171;
+  color: #7f1d1d;
+}
+
+.status-box.grey {
+  background-color: #d1d5db;
+  color: #374151;
+}
+
+/* ==============================
+   Selected Modal
+   ============================== */
+.selected-box {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.detail-Container {
+  width: 70%;
+  max-width: 1000px;
+  min-height: 70%;
+  background-color: #f9fafb;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+/* ==============================
+   Detail Title
+   ============================== */
+.detail-titl {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.detail-titl p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.detail-titl .detail-stat {
+  margin-top: 10px;
+  min-width: 90px;
+  padding: 6px 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #e0e0e0;
+  color: #333;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Variants */
+.detail-stat.green {
+  background-color: #4ade80;
+  color: #064e3b;
+}
+
+.detail-stat.red {
+  background-color: #f87171;
+  color: #7f1d1d;
+}
+
+.detail-stat.grey {
+  background-color: #d1d5db;
+  color: #374151;
+}
+
+/* ==============================
+   Detail Sections
+   ============================== */
+.detail-secondary {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.club-detail,
+.event-detail,
+.guest-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.guest-detail{
+  margin: 1rem 0 0 0;
+}
+
+.club-detail p,
+.event-detail p,
+.guest-detail p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.guest-detail h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* ==============================
+   Description
+   ============================== */
+.detail-desc {
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.detail-desc p {
+  margin: 0.5rem 0 0 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   Created At Info
+   ============================== */
+.created-at {
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+/* ==============================
+   Detail Button
+   ============================== */
+.detail-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Segoe UI", sans-serif;
+  color: #1a1a1a;
+  border: 2px solid #4a90e2;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detail-btn:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #16a34a, #2563eb);
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 900px) {
+  .detail-Container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .detail-secondary {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .detail-btn {
+    width: 100%;
+  }
+}
+
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 1000px) {
+  .detail-titl {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .detail-titl p {
+    margin-top: 10px;
+  }
+
+  .detail-titl .detail-stat {
+    position: absolute;
+    right: 22%;
+    top: 25%;
+  }
+
+  .detail-secondary {
+    flex-direction: column;
+    margin: 3%;
+  }
+
+  .club-detail,
+  .event-detail {
+    width: 100%;
+  }
+
+  .detail-btn {
+    left: 44%;
+  }
+}
+
+@media (max-width: 620px) {
+  .button-bar {
+    margin-top: 2rem;
+  }
+
+  .detail-btn {
+    left: 40%;
+  }
+}
+
+@media (max-width: 510px) {
+  .status-box {
+    right: 5%;
+  }
+
+  .detail-titl {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+  }
+
+  .detail-titl p {
+    width: inherit;
+    margin-top: 10px;
+    font-size: small;
+    text-align: center;
+  }
+
+  .detail-titl .detail-stat {
+    position: relative;
+    left: 1.5%;
+    margin-top: 10px;
+  }
+
+  .club-detail,
+  .event-detail {
+    width: 100%;
+  }
+
+  .detail-btn {
+    left: 38%;
+  }
+}
