@@ -1,10 +1,11 @@
 const mysql = require("mysql2/promise");
 
 const db = mysql.createPool({
-    host: "localhost",
+    host: "mainline.proxy.rlwy.net",
+    port:"28705",
     user: "root",
-    password: "root",
-    database: "EDI_Database",
+    password: "aFvHjYRkUbFaxhXhGcfcMxfGNgbszWtS",
+    database: "railway",
     dateStrings: true,
 });
 
