@@ -40,7 +40,7 @@ router.post("/auth/login", async (req,res) => {
         const user = rows[0];
 
         const ismatch = await bcrypt.compare(password , user.password);
-        if(!ismatch) return res.status(400).json({success:false,message:"Invalid Credentials"});
+        if(!ismatch) return res.json({success:false,message:"Invalid Credentials"});
 
         const token = jwt.sign({id:user.id, email: user.email, PRN: user.PRN, name: user.Fullname, branch: user.branch, role: user.role }, "My_Super_Secret_Key_123" , { expiresIn: "1h" });
 
