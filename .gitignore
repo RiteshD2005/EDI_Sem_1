@@ -1,9 +1,0 @@
-# dependencies
-backend/node_modules
-client/node_modules
-
-# logs
-*.log
-
-# environment variables
-.env
