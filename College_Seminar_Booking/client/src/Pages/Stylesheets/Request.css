@@ -1,0 +1,436 @@
+/* ================= Complete CSS ================= */
+
+/* General Body */
+body {
+    background: linear-gradient(135deg, #a5f3fc, #93c5fd);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #38b6ff, #93c5fd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.hero-section h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Form Container */
+.reqContainer {
+    background-color: #f5f5f5;
+    position: relative;
+    margin: -40px auto 0 auto;
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Lines */
+.line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.line p {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #38b6ff;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 1rem;
+    background-color: #fff;
+}
+
+.line hr {
+    flex: 1;
+    border: 1px solid #38b6ff;
+    opacity: 0.5;
+}
+
+/* Form Layout */
+.cont-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.strip1,
+.strip2,
+.strip3,
+.strip4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12,
+.item13 {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* Inputs and Selects */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    border: 2px solid #38b6ff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1d86d0;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.5);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(56, 182, 255, 0.2);
+}
+
+/* Textarea */
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+/* Checkboxes */
+.checkdiv {
+    margin-top: 1rem;
+}
+
+.checkdiv input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #38b6ff;
+}
+
+.checkdiv label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+    margin-right: 1rem;
+}
+
+button[type="reset"]:hover {
+    background-color: #b3b3b3;
+}
+
+button[type="submit"] {
+    background-color: #38b6ff;
+    color: #fff;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #1d86d0;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #a0cfff;
+    cursor: not-allowed;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .strip1,
+    .strip2,
+    .strip3,
+    .strip4 {
+        flex-direction: column;
+    }
+}
+
+/* ---------- Guest Section (strip5) ---------- */
+.strip5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.item14,
+.item15,
+.item16 {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item14 label,
+.item15 label,
+.item16 label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* ---------- Budget Section (strip6) ---------- */
+.strip6 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    background: #f9f9f9;
+    border: 2px dashed #38b6ff;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.strip6 > label {
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.item17,
+.item18 {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item17 label,
+.item18 label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* ---------- Source of Funds (item19) ---------- */
+.item19 {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.item19 label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* Inputs consistency */
+.item14 input,
+.item15 input,
+.item16 input,
+.item17 input,
+.item18 input,
+.item19 input {
+    width: 100%;
+    border: 2px solid #38b6ff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.item14 input:focus,
+.item15 input:focus,
+.item16 input:focus,
+.item17 input:focus,
+.item18 input:focus,
+.item19 input:focus {
+    outline: none;
+    border-color: #1d86d0;
+    box-shadow: 0 0 5px rgba(56, 182, 255, 0.4);
+}
+
+/* ---------- Messagebox (Toast) ---------- */
+.Messagetoast {
+    background-color: #222;
+    position: fixed;
+    right: 0%;
+    bottom: 10%;
+    height: 4rem;
+    width: 15rem;
+    animation: SlideIn 0.8s forwards;
+    padding: 10px 20px;
+    color: green;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 0 0 12px;
+    z-index: 100;
+}
+.Messagetoast.failed {
+    color: red;
+}
+@keyframes SlideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    } 
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/* ---------- Centered Message Container (Modal) ---------- */
+.difbody {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MessageCont {
+    background-color: #fff;
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    min-height: 200px;
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.MessageCont h2 {
+    margin-bottom: 1rem;
+    color: #222;
+    font-size: 1.5rem;
+}
+
+.MessageCont p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.MessageCont .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.MessageCont .modal-buttons button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.MessageCont .modal-buttons .confirm {
+    background: #38b6ff;
+    color: #fff;
+}
+.MessageCont .modal-buttons .confirm:hover {
+    background: #1d86d0;
+}
+
+.MessageCont .modal-buttons .cancel {
+    background: #eee;
+    color: #333;
+}
+.MessageCont .modal-buttons .cancel:hover {
+    background: #ddd;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .strip5,
+    .strip6 {
+        flex-direction: column;
+    }
+
+    .MessageCont {
+        width: 85%;
+        padding: 1.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

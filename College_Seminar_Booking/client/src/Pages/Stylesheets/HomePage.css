@@ -1,0 +1,139 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1e3c72, #2a5298, #0f2027);
+    color: #fff;
+}
+
+/* ---------- Banner (Glass Header) ---------- */
+.Banner {
+    position: fixed;
+    width: 100%;
+    min-height: 32vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.Banner {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.Banner p {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* ---------- Control Panel (Glass Panel) ---------- */
+.Control-panel {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 68vh;
+    padding: 2rem 1rem;
+    padding-top: 20vh;
+
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 24px 24px 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    animation: fadeUp 0.8s ease;
+}
+
+/* ---------- Cards (Glass Buttons) ---------- */
+.Hcard {
+    height: 10.5rem;
+    width: 10.5rem;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.Hcard:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .Banner {
+        font-size: 2rem;
+    }
+
+    .Hcard {
+        width: 8.5rem;
+        height: 8.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Banner {
+        font-size: 1.6rem;
+    }
+
+    .Control-panel {
+        height: 65vh;
+    }
+
+    .Hcard {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}

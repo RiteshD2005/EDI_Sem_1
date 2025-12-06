@@ -1,0 +1,167 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === LOGIN PAGE MAIN LAYOUT === */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #1a73e8, #4dabf7);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated floating circles */
+.login-wrapper::before,
+.login-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  filter: blur(4px);
+  animation: float 6s infinite ease-in-out;
+}
+
+.login-wrapper::before {
+  top: 10%;
+  left: 12%;
+}
+
+.login-wrapper::after {
+  bottom: 10%;
+  right: 12%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-22px); }
+  100% { transform: translateY(0px); }
+}
+
+/* === LOGIN CARD === */
+.login-card {
+  width: 380px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  transform: translateY(25px);
+  opacity: 0;
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+/* === INPUTS === */
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 15px;
+  color: white;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.login-card input::placeholder {
+  color: #e6e6e6;
+}
+
+.login-card input:focus {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+}
+
+/* === BUTTON === */
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: white;
+  color: #1a73e8;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.login-card button:hover {
+  background: #e9f0ff;
+  transform: translateY(-3px);
+}
+
+/* === MESSAGE BOX === */
+.Messagebox {
+  text-align: center;
+  color: #ffdddd;
+  font-weight: bold;
+  min-height: 20px;
+}
+
+/* === EXTRA TEXT === */
+.login-extra {
+  text-align: center;
+  margin-top: 18px;
+  color: #ffffff;
+}
+
+.login-extra a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Dropdown styled like glass input */
+.glass-select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 15px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.glass-select option {
+  color: black; /* dropdown list text */
+}
+
+.glass-select:focus {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+}
